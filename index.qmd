@@ -17,7 +17,7 @@ If a client outside the mesh makes a request to `https://yourcompany.com/` and y
 ![](assets/client-to-app.png)
 
 ## Istio Does HTTP
-[Istio](https://istio.io) can do all sorts of useful things with HTTP traffic. It can [make routing decisions](https://istio.io/latest/docs/concepts/traffic-management/) based on request properties like hostname (or `authority` [as it's known in HTTP2](https://datatracker.ietf.org/doc/html/rfc9113#section-8.3.1)), header values, query parameters, and so on. It can produce fine grained [metrics and logs](https://istio.io/latest/docs/concepts/observability/) capturing details like request counts and HTTP and gRPC status codes. And it can enforce traffic policies, allowing or rejecting requests based on attributes like the HTTP method, or the claims present in a JWT, or the URI being accessed.
+[Istio](https://istio.io) can do all sorts of useful things with HTTP traffic. It can [make routing decisions](https://istio.io/latest/docs/concepts/traffic-management/) based on request properties like hostname (or `authority` [as it's known in HTTP2](https://datatracker.ietf.org/doc/html/rfc9113#section-8.3.1)), header values, query parameters, and so on. It can produce fine grained [metrics and logs](https://istio.io/latest/docs/concepts/observability/) capturing details like request counts and HTTP and gRPC status codes. And it can [enforce traffic policies](https://istio.io/latest/docs/reference/config/security/authorization-policy/), allowing or rejecting requests based on attributes like the HTTP method, or the claims present in a JWT, or the URI being accessed.
 
 However in order to do these things it **has to be able to inspect the traffic**.
 
