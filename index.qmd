@@ -8,12 +8,18 @@ format:
 
 ## tl;dr
 
-If your app inside the mesh makes an outbound request to `https://thirdparty.com/api/v1`, Istio cannot look inside the encrypted traffic. If a client outside the mesh makes a request to `https://yourcompany.com/` and you have configured Istio to route TLS straight through to be terminated at your application pods, Istio cannot look inside that traffic either.
+If your app inside the mesh makes an outbound request to `https://thirdparty.com/api/v1`, **Istio cannot look inside** the encrypted traffic.
+
+![](assets/app-to-thirdparty.png)
+
+If a client outside the mesh makes a request to `https://yourcompany.com/` and you have configured Istio to route TLS straight through to be terminated at your application pods, **Istio cannot look inside** that traffic either.
+
+![](assets/client-to-app.png)
 
 ## Istio Does HTTP
 [Istio](https://istio.io) can do all sorts of useful things with HTTP traffic. It can [make routing decisions](https://istio.io/latest/docs/concepts/traffic-management/) based on request properties like hostname (or `authority` [as it's known in HTTP2](https://datatracker.ietf.org/doc/html/rfc9113#section-8.3.1)), header values, query parameters, and so on. It can produce fine grained [metrics and logs](https://istio.io/latest/docs/concepts/observability/) capturing details like request counts and HTTP and gRPC status codes. And it can enforce traffic policies, allowing or rejecting requests based on attributes like the HTTP method, or the claims present in a JWT, or the URI being accessed.
 
-However in order to do these things it has to be able to **inspect the traffic**.
+However in order to do these things it **has to be able to inspect the traffic**.
 
 ## Istio Does TLS
 

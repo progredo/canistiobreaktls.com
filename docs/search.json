@@ -4,14 +4,14 @@
     "href": "index.html",
     "title": "No, Istio Cannot Break TLS",
     "section": "",
-    "text": "If your app inside the mesh makes an outbound request to https://thirdparty.com/api/v1, Istio cannot look inside the encrypted traffic. If a client outside the mesh makes a request to https://yourcompany.com/ and you have configured Istio to route TLS straight through to be terminated at your application pods, Istio cannot look inside that traffic either."
+    "text": "If your app inside the mesh makes an outbound request to https://thirdparty.com/api/v1, Istio cannot look inside the encrypted traffic.\n\nIf a client outside the mesh makes a request to https://yourcompany.com/ and you have configured Istio to route TLS straight through to be terminated at your application pods, Istio cannot look inside that traffic either."
   },
   {
     "objectID": "index.html#tldr",
     "href": "index.html#tldr",
     "title": "No, Istio Cannot Break TLS",
     "section": "",
-    "text": "If your app inside the mesh makes an outbound request to https://thirdparty.com/api/v1, Istio cannot look inside the encrypted traffic. If a client outside the mesh makes a request to https://yourcompany.com/ and you have configured Istio to route TLS straight through to be terminated at your application pods, Istio cannot look inside that traffic either."
+    "text": "If your app inside the mesh makes an outbound request to https://thirdparty.com/api/v1, Istio cannot look inside the encrypted traffic.\n\nIf a client outside the mesh makes a request to https://yourcompany.com/ and you have configured Istio to route TLS straight through to be terminated at your application pods, Istio cannot look inside that traffic either."
   },
   {
     "objectID": "index.html#istio-does-http",
