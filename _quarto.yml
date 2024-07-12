@@ -1,0 +1,6 @@
+project:
+  type: website
+
+website:
+  page-footer: |
+    This public service announcement provided by [rob salmond](rob@progredo.ca), copyright 2024 progredo systems inc.

@@ -1,0 +1,37 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "No, Istio Cannot Break TLS",
+    "section": "",
+    "text": "If your app inside the mesh makes an outbound request to https://thirdparty.com/api/v1, Istio cannot look inside the encrypted traffic. If a client outside the mesh makes a request to https://yourcompany.com/ and you have configured Istio to route TLS straight through to be terminated at your application pods, Istio cannot look inside that traffic either."
+  },
+  {
+    "objectID": "index.html#tldr",
+    "href": "index.html#tldr",
+    "title": "No, Istio Cannot Break TLS",
+    "section": "",
+    "text": "If your app inside the mesh makes an outbound request to https://thirdparty.com/api/v1, Istio cannot look inside the encrypted traffic. If a client outside the mesh makes a request to https://yourcompany.com/ and you have configured Istio to route TLS straight through to be terminated at your application pods, Istio cannot look inside that traffic either."
+  },
+  {
+    "objectID": "index.html#istio-does-http",
+    "href": "index.html#istio-does-http",
+    "title": "No, Istio Cannot Break TLS",
+    "section": "Istio Does HTTP",
+    "text": "Istio Does HTTP\nIstio can do all sorts of useful things with HTTP traffic. It can make routing decisions based on request properties like hostname (or authority as it’s known in HTTP2), header values, query parameters, and so on. It can produce fine grained metrics and logs capturing details like request counts and HTTP and gRPC status codes. And it can enforce traffic policies, allowing or rejecting requests based on attributes like the HTTP method, or the claims present in a JWT, or the URI being accessed.\nHowever in order to do these things it has to be able to inspect the traffic."
+  },
+  {
+    "objectID": "index.html#istio-does-tls",
+    "href": "index.html#istio-does-tls",
+    "title": "No, Istio Cannot Break TLS",
+    "section": "Istio Does TLS",
+    "text": "Istio Does TLS\nIstio can also do useful things with TLS traffic. It can route requests based on SNI headers, observe the number of bytes sent and received, and the number of active connections. But, Istio cannot look inside TLS encrypted traffic 1 yet 2."
+  },
+  {
+    "objectID": "index.html#footnotes",
+    "href": "index.html#footnotes",
+    "title": "No, Istio Cannot Break TLS",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nUnless you have the key & cert for the target domain, or generate a self signed cert and configure Istio to trust it.↩︎\nWork is underway to implement squid proxy style “TLS bumping” in envoy. See this github issue and this istiocon presentation for more info.↩︎"
+  }
+]
