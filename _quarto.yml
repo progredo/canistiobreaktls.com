@@ -5,4 +5,4 @@ project:
     - "assets/*"
 website:
   page-footer: |
-    This public service announcement provided by [rob salmond](rob@progredo.ca), copyright 2024 progredo systems inc.
+    This public service announcement provided by [rob salmond](mailto:rob@progredo.ca), copyright 2024-2025 progredo systems inc.
